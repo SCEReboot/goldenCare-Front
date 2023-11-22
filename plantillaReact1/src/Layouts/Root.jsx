@@ -6,9 +6,9 @@ import Header from '../Components/Header/Header'
 const Root = () => {
   return (
     <>
-    <Header/>
-    <Outlet/>
-    <Footer/>
+      <Header/>
+      <Outlet/>
+      <Footer/>
     </>  
   )
 }

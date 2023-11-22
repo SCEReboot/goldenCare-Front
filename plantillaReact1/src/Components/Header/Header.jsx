@@ -1,8 +1,12 @@
+import { Box } from '@mui/material'
 import React from 'react'
+import './Header.css'
 
 const Header = () => {
   return (
-    <h1>Header</h1>
+    <Box className='header'>
+        <h1>Header</h1>
+    </Box>
   )
 }
 
