@@ -1,0 +1,25 @@
+
+ .infoIntro {
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    /* background-image: url('../../assets/fondo.png'); */
+    background-size: cover;
+    width: 100vw;
+}
+
+
+.image-container {
+    width: 100%;
+}
+.fondoDeHome{
+    object-fit:contain;
+
+}
+
+.buttons{
+    display: flex;
+    
+}

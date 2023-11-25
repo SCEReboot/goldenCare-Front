@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Home = () => {
+function Home() {
   return (
-    <div>
-      <h1>Hola, soy el precioso Home</h1>
-    </div>
+    <div><h1>Welcome</h1></div>
   )
 }
 
