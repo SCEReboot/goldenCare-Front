@@ -4,24 +4,24 @@ import React, { useEffect, useState } from 'react'
  import {getAllPatientData} from "../../Services/patient.service"
  import { useLocation } from 'react-router-dom'
 function PatientProfile() {
-console.log(patient)
-const location = useLocation()
+
 
     const [allPatientData, setAllPatinetData] = useState({})   
     const [tasks, setTasks] = useState()   
     const [refresh, setRefresh] = useState(false)   
   
-    // const {state:{patient}}=useLocation()   
-    // console.log(patient)
+    const {state:{patient}}=useLocation()   
+    console.log(patient)
     useEffect(() => {
       patientData()
-      setAllPatinetData(data)   
+      // setAllPatinetData()   
     })
   
 
     async function patientData() {
       try {
-        const data = await getAllPatientData()   
+        const data = await getAllPatientData(patient.id)   
+     setAllPatinetData(data)
      
       } catch (error) {
         console.error("Error al obtener datos del usuario", error)   
@@ -29,6 +29,7 @@ const location = useLocation()
     }
   return (
     <>
+    ////si tienes allPatientData &&
     {/* <Box>{patient && <HeaderPatientProfile patient={patient} />}</Box> */}
     <Box
       sx={{

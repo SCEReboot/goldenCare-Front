@@ -10,9 +10,9 @@ export const getOnePatient  = async () => {
       console.log(data)
     return data
 }
-export const getAllPatientData = async () => {
+export const getAllPatientData = async (id) => {
   
-  const {data} = await api.get('/patient/getAllPatientData/:id', {
+  const {data} = await api.get(`/patient/getAllPatientData/${id}`, {
     headers: {
       authorization: localStorage.getItem('token')
     }

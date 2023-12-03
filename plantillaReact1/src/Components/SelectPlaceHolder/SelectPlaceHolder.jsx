@@ -25,10 +25,17 @@ const MenuProps = {
 
 export default function MultipleSelectPlaceholder({setNurse}) {
 
+
+
   const theme = useTheme()
   const [nurses, setNurses] = useState([])
   const [selectedNurse, setSelectedNurse] = useState([]);
 
+  function handleSelectNurse(id) {
+    const result = nurses.filter((nurse) => nurse.id === id)
+    setSelectedNurse(result[0].first_name)
+  
+  }
   useEffect(() => {
 
     const obtenerEnfermerasDesdeAPI = async () => {
@@ -45,9 +52,9 @@ export default function MultipleSelectPlaceholder({setNurse}) {
     obtenerEnfermerasDesdeAPI();
   }, [])
 
-  const handleChange = (event) => {///////////porque no esta marcado?
+  const handleChange = (event) => {
     
-    setSelectedNurse(event.target.value)
+    handleSelectNurse(event.target.value)
     console.log(event)
     setNurse(event.target.value)
   }
@@ -59,13 +66,13 @@ export default function MultipleSelectPlaceholder({setNurse}) {
   
           displayEmpty
           value={selectedNurse}
-          onChange={(e)=>{
-            setNurse(e.target.value)
-          }}
+          onChange={
+            handleChange
+          }
           input={<OutlinedInput />}
           renderValue={(selected) => {
             if (selected.length === 0) {
-              return <em>Select</em>;
+              return <em>Select a Nurse</em>;
             }
 
             return selectedNurse

@@ -1,29 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { getAllDataUser, getMyTasks } from "../../Services/user.service";
-import ListPatients from "../../Components/ListPatients/ListPatients";
-import CardProfile from "../../Components/CardProfile/CardProfile";
-import { Box } from "@mui/material";
-import ListTasksBox from "../../Components/ListTasks/ListTasks";
-import "./Home.css";
+import React, { useEffect, useState } from "react"   
+import { getAllDataUser, getMyTasks } from "../../Services/user.service"   
+import ListPatients from "../../Components/ListPatients/ListPatients"   
+import CardProfile from "../../Components/CardProfile/CardProfile"   
+import { Box } from "@mui/material"   
+import ListTasksBox from "../../Components/ListTasks/ListTasks"   
+import "./Home.css"   
 function Home() {
-  const [allOwnData, setAllOwnData] = useState({});
-  const [tasks, setTasks] = useState();
-  const [refresh, setRefresh] = useState(false);
+  const [allOwnData, setAllOwnData] = useState({})
+  const [tasks, setTasks] = useState()   
+  const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
-    getAllOwnData();
+    getAllOwnData()
    
-  }, [refresh]);
-
+  }, [refresh])
   async function getAllOwnData() {
     try {
-      const data = await getAllDataUser();
-      const tasks = await getMyTasks();
-      console.log(data);
-      setTasks(tasks);
-      setAllOwnData(data);
+      const data = await getAllDataUser()
+      const tasks = await getMyTasks()
+      console.log(data)
+      setTasks(tasks)
+      setAllOwnData(data)
     } catch (error) {
-      console.error("Error al obtener datos del usuario", error);
+      console.error("Error al obtener datos del usuario", error)
     }
   }
 
@@ -70,7 +69,7 @@ function Home() {
         </Box>
       </Box>
     </>
-  );
+  )   
 }
 // estoy aqui
-export default Home;
+export default Home   
