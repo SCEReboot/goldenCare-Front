@@ -5,3 +5,27 @@
     align-items: center;
     justify-content: space-around;
 }
+
+
+.signupContainer {
+    
+    display: flex;
+    height: 100vh;
+    border-radius: 0px 0px 90px 0px;
+    flex-direction: column;
+    background: linear-gradient(to bottom, transparent, #e2f9e2), url(/src/assets/fondo.png);
+    background-size: cover; 
+    background-position: center; 
+    align-items: center;
+  }
+  
+.cardSignup{
+   
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center; 
+    
+    
+}

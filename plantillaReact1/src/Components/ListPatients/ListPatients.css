@@ -1,0 +1,10 @@
+.TasksContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    flex-wrap: nowrap;
+}
+h2{
+margin-left: 42%;
+}

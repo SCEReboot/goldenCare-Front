@@ -1,32 +1,41 @@
-import { Box } from "@mui/material"
+import { Box, Button, Typography } from "@mui/material"
+
 import "./Intro.css"
 import React from "react"
+import { useNavigate } from "react-router-dom";
 
-import { Link } from 'react-router-dom'
 
 function Intro() {
-    
+  const navigate = useNavigate();
+     function handleOnCreateAccount(){
+      navigate("/signup")
+    }
+     function handleOnLogin(){
+      navigate("/login")
+    }
   return (
-  
-      <Box className="infoIntro">
+  <>
+    <Box className="container">
+      <div className="infoIntro">
 
-        <h1>Welcome to Golden Care!</h1>
-        <p>Bringing Families and Caregivers Together to Offer Warm Support to Our Seniors.</p>
-        <p>Because Your Loved Ones Deserve the Best, and We're Here to Make It Happen!</p>
-        <div className="image-container">
-          {/* <img src="./assets/fondo.png" alt="" className="FondoDeHome"/> */}
-
-        </div>
-        <div className="buttons">    
-
-            <Link to="/signup">   <button >Create Account</button>    </Link>
-            <Link to="/login">    <button >Sign In</button>   </Link>
-
-        </div>
-      
+        <img src="../src/assets/golden.png" alt="" className="img"/>
+        <Typography gutterBottom variant="h7" component="div">
+           Brindando a Familias y Cuidadores un Cálido Apoyo.
+        </Typography>
+       
+      </div> 
+      <Box sx={{ display: "flex" , justifyContent:"space-around", marginTop:"20vh"}}>    
+        <Button  color="success" variant="outlined" size="large" onClick={handleOnCreateAccount}>Create Account</Button>
+        <Button  color="success" variant="outlined" size="large" onClick={handleOnLogin}  > Login</Button>  
       </Box>
-     
+  </Box>
+    <div className="footer">
+        <Typography gutterBottom variant="h12" component="div">
+          Copyright © 2023 Golden Care, trading as GC.
+        </Typography>
 
+    </div>
+</>
   )
 }
 

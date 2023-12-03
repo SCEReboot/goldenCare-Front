@@ -1,25 +1,37 @@
-
- .infoIntro {
-    background-repeat: no-repeat;
+.container {
+    display: flex;
     height: 100vh;
+    border-radius: 0px 0px 90px 0px;
+    flex-direction: column;
+    background: linear-gradient(to bottom, transparent, #e2f9e2), url(/src/assets/fondo.png);
+    background-size: cover; 
+    background-position: center; 
+    justify-content: center;
+  }
+  
+.img{
+    height: 350px;
+
+}
+.infoIntro {
+    margin-top: -100px;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: center;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-direction:column;
-    /* background-image: url('../../assets/fondo.png'); */
-    background-size: cover;
-    width: 100vw;
+    margin-bottom: 50px;
 }
 
 
-.image-container {
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-}
-.fondoDeHome{
-    object-fit:contain;
-
-}
-
-.buttons{
-    display: flex;
-    
+    text-align: center;
+    padding: 10px;
 }

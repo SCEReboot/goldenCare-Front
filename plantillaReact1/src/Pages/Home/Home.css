@@ -1,0 +1,15 @@
+/* .home{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, transparent, #e2f9e2), url(/src/assets/fondo.png);
+    background-size: cover; 
+    background-position: center; 
+    height: 100%;
+} */
+.cardProfile{
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 20vh;
+    opacity: 0.9px;
+}
